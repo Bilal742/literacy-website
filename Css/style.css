@@ -1,0 +1,260 @@
+/* ---------------------------
+   GLOBAL RESET
+--------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth animations */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------------------------
+   NAVBAR
+--------------------------- */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: rgba(0,0,0,0.7);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+#logo h1 {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Nav Menu */
+#navbar ul {
+    display: flex;
+    gap: 25px;
+}
+
+#navbar ul li a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    color: #ffd700;
+}
+
+/* ---------------------------
+   HOME SECTION
+--------------------------- */
+#home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 95vh;
+    width: 100%;
+    background: url(../Img/bg2.jpg) no-repeat center/cover;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+#home h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+/* ---------------------------
+   SERVICES
+--------------------------- */
+#services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+#services .box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#services .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+}
+
+#services .box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+#services .box h2 {
+    font-size: 1.4rem;
+    color: #222;
+}
+
+#services .box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ---------------------------
+   FOLLOW SECTION
+--------------------------- */
+#follow-container {
+    padding: 50px 20px;
+    background: #001677;
+    color: white;
+}
+
+#follow-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+#follow {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+#follow .iteam img {
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px white;
+}
+
+/* ---------------------------
+   FOOTER
+--------------------------- */
+#footer-container {
+    background: #000;
+    padding: 50px 20px;
+    color: white;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-iteam h3 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-iteam p {
+    margin-top: 10px;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.footer-iteam img {
+    margin-top: 35px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* ---------------------------
+   BUTTON
+--------------------------- */
+.btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    background: #000;
+    color: white;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+/* ---------------------------
+   MEDIA QUERIES (RESPONSIVE)
+--------------------------- */
+
+/* Tablets */
+@media (max-width: 900px) {
+    #navbar {
+        padding: 20px 25px;
+    }
+
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    #navbar {
+        gap:20px;
+    }
+
+    #navbar ul {
+        gap: 10px;
+        text-align: center;
+    }
+
+    #home h2 {
+        font-size: 1.8rem;
+    }
+
+    #home p {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #services .box {
+        width: 90%;
+    }
+
+    #follow .iteam img {
+        height: 140px;
+        width: 140px;
+    }
+}
